@@ -3,3 +3,6 @@ for pid in $(ps -ef | awk '/firefox/ {print $2}'); do kill -9 $pid; done
 
 //Look for <text> in all .py files in the <dir> directory
 find <dir> -name '*.py' | xargs grep <text>
+
+// Kill all processes having "postgres" in their details
+ps -ef | grep postgres | awk '{print $2}' | xargs kill -9
