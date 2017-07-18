@@ -6,3 +6,6 @@ find <dir> -name '*.py' | xargs grep <text>
 
 // Kill all processes having "postgres" in their details
 ps -ef | grep postgres | awk '{print $2}' | xargs kill -9
+
+// see processes and ports they are listening to
+netstat -tulpn
